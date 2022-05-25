@@ -12,5 +12,5 @@ function component() {
   console.log(keyStore);
   return element;
 }
-
-document.body.appendChild(component());
+component();
+// document.body.appendChild(component());
