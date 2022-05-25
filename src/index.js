@@ -5,12 +5,9 @@ function component() {
 
   // Lodash, now imported by this script
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  const keyStore =
-    typeof window === 'undefined'
-      ? new keyStores.InMemoryKeyStore()
-      : new keyStores.BrowserLocalStorageKeyStore();
+  const keyStore = new keyStores.BrowserLocalStorageKeyStore();
   console.log(keyStore);
   return element;
 }
 component();
-// document.body.appendChild(component());
+document.body.appendChild(component());
